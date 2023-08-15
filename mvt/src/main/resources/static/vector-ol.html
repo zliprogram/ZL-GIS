@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.4.0/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+</body>
+<script>
+
+    var projection4326 = new ol.proj.Projection({
+        code: 'EPSG:4326',
+        units: 'degrees',
+    });
+
+    var defaultView = new ol.View({
+        projection: projection4326,
+        center: [113, 23],
+        //new ol.proj.fromLonLat([114.15, 22.65]),
+        zoom: 4
+    });
+
+    var layers = [
+        new ol.layer.Tile({
+            source: new ol.source.OSM()
+        }),
+        new ol.layer.VectorTile({
+            projection: projection4326,
+            source: new ol.source.VectorTile({
+                format: new ol.format.MVT(),
+                projection: projection4326,
+                tilePixelRatio: 1,
+                url: 'http://localhost:8050/zlgis/vector/tile/{z}/{x}/{y}'
+            })
+        })
+    ];
+
+    new ol.Map({
+        layers: layers,
+        target: 'map',
+        view: defaultView
+    });
+</script>
+</html>
