@@ -1,0 +1,6135 @@
+{
+	"info": {
+		"_postman_id": "d7e1da87-d45e-42a2-86f6-f28c02adb6b3",
+		"name": "GeoServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "状态",
+			"item": [
+				{
+					"name": "服务版本",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/about/version.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"about",
+								"version.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jar包清单",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/about/manifest.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"about",
+								"manifest.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "服务清单",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/about/status.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"about",
+								"status.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "系统状态（2.16之后版本有，缺乏有效数据，和接口文档返回值不一样）",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/about/system-status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"about",
+								"system-status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "数据",
+			"item": [
+				{
+					"name": "预览",
+					"item": []
+				},
+				{
+					"name": "工作区",
+					"item": [
+						{
+							"name": "获取所有的工作空间",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取工作空间详情",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/cite.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"cite.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加工作空间",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"workspace\": {\r\n\t\t\"name\": \"MyWorkspace\"\r\n\t}\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改工作空间",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"workspace\": {\r\n\t\t\"name\": \"MyWorkspace111\"\r\n\t}\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/MyWorkspace",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"MyWorkspace"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除工作空间",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"workspace\": {\r\n\t\t\"name\": \"MyWorkspace\"\r\n\t}\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加工作空间 Copy",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"string\",\r\n  \"enabled\": true,\r\n  \"inMemoryCached\": true,\r\n  \"name\": \"ne:jinning\",\r\n  \"mimeFormats\": [\r\n    \"image/png\"\r\n  ],\r\n  \"gridSubsets\": {\r\n    \"gridSubset\": {\r\n      \"gridSetName\": \"EPSG:4326\",\r\n      \"extent\": {\r\n        \"bounds\": 0\r\n      },\r\n      \"zoomStart\": 0,\r\n      \"zoomStop\": 0\r\n    }\r\n  },\r\n  \"metaWidthHeight\": 0,\r\n  \"expireCache\": 0,\r\n  \"expireClients\": 0,\r\n  \"parameterFilters\": {},\r\n  \"gutter\": 0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/gwc/rest/layers/ne:jinning",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"layers",
+										"ne:jinning"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "数据存储",
+					"item": [
+						{
+							"name": "栅格数据存储",
+							"item": []
+						},
+						{
+							"name": "shp数据存储",
+							"item": [
+								{
+									"name": "shp数据添加到存储空间",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "geoserver",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"dataStore\": {\r\n    \"name\": \"D20190810\",\r\n    \"connectionParameters\": {\r\n      \"entry\": [\r\n        {\"@key\":\"url\",\"$\":\"file://C:/Users/Allen/Desktop/测试shp/temp/D20190810.shp\"},\r\n        {\"@key\":\"charset\",\"$\":\"UTF-8\"}\r\n      ]\r\n    }\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/datastores",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"geoserver",
+												"rest",
+												"workspaces",
+												"QXYJ_WS",
+												"datastores"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "发布shp数据至wms图层",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "geoserver",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"testname\",\r\n  \"nativeName\": \"testname\",\r\n  \"namespace\": {\r\n    \"name\": \"QXYJ_WS\",\r\n    \"link\": \"http://QXYJ_WS\"\r\n  },\r\n  \"title\": \"test\",\r\n  \"abstract\": \"test\",\r\n  \"description\": \"test\",\r\n  \"keywords\": [\r\n    {\r\n      \"string\": \"keywords\"\r\n    }\r\n  ],\r\n  \"metadatalinks\": {\r\n    \"metadataLink\": [\r\n      {\r\n        \"type\": \"string\",\r\n        \"metadataType\": \"string\",\r\n        \"content\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"dataLinks\": {\r\n    \"metadataLink\": [\r\n      {\r\n        \"type\": \"string\",\r\n        \"content\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"nativeCRS\": \"EPSG:4326\",\r\n  \"srs\": \"EPSG:4326\",\r\n  \"nativeBoundingBox\": {\r\n    \"minx\": 0,\r\n    \"maxx\": 0,\r\n    \"miny\": 0,\r\n    \"maxy\": 0,\r\n    \"crs\": \"string\"\r\n  },\r\n  \"latLonBoundingBox\": {\r\n    \"minx\": 0,\r\n    \"maxx\": 0,\r\n    \"miny\": 0,\r\n    \"maxy\": 0,\r\n    \"crs\": \"string\"\r\n  },\r\n  \"projectionPolicy\": \"FORCE_DECLARED\",\r\n  \"enabled\": true,\r\n  \"metadata\": [\r\n    {\r\n      \"@key\": \"regionateStrategy\",\r\n      \"text\": \"string\"\r\n    }\r\n  ],\r\n  \"store\": {\r\n    \"@class\": \"string\",\r\n    \"name\": \"string\",\r\n    \"href\": \"string\"\r\n  },\r\n  \"forcedRemoteStyle\": \"string\",\r\n  \"selectedRemoteFormats\": [\r\n    \"string\"\r\n  ],\r\n  \"preferredFormat\": \"string\",\r\n  \"selectedRemoteStyles\": [\r\n    \"string\"\r\n  ],\r\n  \"allAvailableRemoteStyles\": [\r\n    {\r\n      \"name\": \"string\",\r\n      \"format\": \"sld\",\r\n      \"languageVersion\": {\r\n        \"version\": \"1.0.0\"\r\n      },\r\n      \"legend\": {\r\n        \"width\": 0,\r\n        \"height\": 0,\r\n        \"format\": \"image/png\",\r\n        \"onlineResource\": \"string\"\r\n      }\r\n    }\r\n  ],\r\n  \"minScale\": 0,\r\n  \"maxScale\": 0,\r\n  \"metadataBBoxRespected\": true\r\n}"
+										},
+										"url": {
+											"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/wmslayers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"geoserver",
+												"rest",
+												"workspaces",
+												"QXYJ_WS",
+												"wmslayers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "获取数据存储列表",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "geoserver",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/wmslayers?list=configured",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"geoserver",
+												"rest",
+												"workspaces",
+												"QXYJ_WS",
+												"wmslayers"
+											],
+											"query": [
+												{
+													"key": "list",
+													"value": "configured"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "获取数据存储列表",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "geoserver",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:8080/geoserver/rest/workspaces/DITU/wmsstores/COUNTRY.WP/wmslayers?list=configured",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"geoserver",
+												"rest",
+												"workspaces",
+												"DITU",
+												"wmsstores",
+												"COUNTRY.WP",
+												"wmslayers"
+											],
+											"query": [
+												{
+													"key": "list",
+													"value": "configured"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "发布地图(500错误)",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "geoserver",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"string\",\r\n  \"nativeName\": \"string\",\r\n  \"namespace\": {\r\n    \"name\": \"string\",\r\n    \"link\": \"string\"\r\n  },\r\n  \"title\": \"string\",\r\n  \"abstract\": \"string\",\r\n  \"description\": \"string\",\r\n  \"keywords\": [\r\n    {\r\n      \"string\": \"string\"\r\n    }\r\n  ],\r\n  \"metadatalinks\": {\r\n    \"metadataLink\": [\r\n      {\r\n        \"type\": \"string\",\r\n        \"metadataType\": \"string\",\r\n        \"content\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"dataLinks\": {\r\n    \"metadataLink\": [\r\n      {\r\n        \"type\": \"string\",\r\n        \"content\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"nativeCRS\": \"string\",\r\n  \"srs\": \"string\",\r\n  \"nativeBoundingBox\": {\r\n    \"minx\": 0,\r\n    \"maxx\": 0,\r\n    \"miny\": 0,\r\n    \"maxy\": 0,\r\n    \"crs\": \"string\"\r\n  },\r\n  \"latLonBoundingBox\": {\r\n    \"minx\": 0,\r\n    \"maxx\": 0,\r\n    \"miny\": 0,\r\n    \"maxy\": 0,\r\n    \"crs\": \"string\"\r\n  },\r\n  \"projectionPolicy\": \"FORCE_DECLARED\",\r\n  \"enabled\": true,\r\n  \"metadata\": [\r\n    {\r\n      \"@key\": \"regionateStrategy\",\r\n      \"text\": \"string\"\r\n    }\r\n  ],\r\n  \"store\": {\r\n    \"@class\": \"string\",\r\n    \"name\": \"string\",\r\n    \"href\": \"string\"\r\n  },\r\n  \"forcedRemoteStyle\": \"string\",\r\n  \"selectedRemoteFormats\": [\r\n    \"string\"\r\n  ],\r\n  \"preferredFormat\": \"string\",\r\n  \"selectedRemoteStyles\": [\r\n    \"string\"\r\n  ],\r\n  \"allAvailableRemoteStyles\": [\r\n    {\r\n      \"name\": \"string\",\r\n      \"format\": \"sld\",\r\n      \"languageVersion\": {\r\n        \"version\": \"1.0.0\"\r\n      },\r\n      \"legend\": {\r\n        \"width\": 0,\r\n        \"height\": 0,\r\n        \"format\": \"image/png\",\r\n        \"onlineResource\": \"string\"\r\n      }\r\n    }\r\n  ],\r\n  \"minScale\": 0,\r\n  \"maxScale\": 0,\r\n  \"metadataBBoxRespected\": true\r\n}"
+										},
+										"url": {
+											"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/wmsstores/D20190810/wmslayers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"geoserver",
+												"rest",
+												"workspaces",
+												"QXYJ_WS",
+												"wmsstores",
+												"D20190810",
+												"wmslayers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "获取工作空间中数据存储图层信息（500）",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "geoserver",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/wmsstores/QXYJ/wmslayers/D20190801",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"geoserver",
+												"rest",
+												"workspaces",
+												"QXYJ_WS",
+												"wmsstores",
+												"QXYJ",
+												"wmslayers",
+												"D20190801"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "获取工作空间中的数据存储",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "geoserver",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "admin",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/datastores",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"geoserver",
+												"rest",
+												"workspaces",
+												"QXYJ_WS",
+												"datastores"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "图层",
+					"item": [
+						{
+							"name": "获取所有图层信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layers.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layers.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取单个图层",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layers/QXYJ_WS:D20190810.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layers",
+										"QXYJ_WS:D20190810.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除单个图层",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layers/DITU:D201908012.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layers",
+										"DITU:D201908012.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改单个图层",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"layer\": {\n        \"name\": \"D20190810\",\n        \"type\": \"VECTOR\",\n        \"defaultStyle\": {\n            \"name\": \"myStyle1\",\n            \"href\": \"http://localhost:8080/geoserver/rest/styles/myStyle1.json\"\n        },\n        \"resource\": {\n            \"@class\": \"featureType\",\n            \"name\": \"QXYJ_WS:D20190810\",\n            \"href\": \"http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/datastores/QXYJ/featuretypes/D20190810.json\"\n        },\n        \"queryable\": true,\n        \"opaque\": false,\n        \"attribution\": {\n            \"logoWidth\": 0,\n            \"logoHeight\": 0\n        }\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layers/QXYJ_WS:D20190810.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layers",
+										"QXYJ_WS:D20190810.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取单个工作空间的所有图层",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/DITU/layers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"DITU",
+										"layers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取单个工作空间的某个图层",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/layers/D20190810",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"QXYJ_WS",
+										"layers",
+										"D20190810"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除单个工作空间的某个图层",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/layers/D20190601",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"QXYJ_WS",
+										"layers",
+										"D20190601"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑工作空间中单个图层信息(500)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"layer\": {\n        \"name\": \"D20190601\",\n        \"type\": \"VECTOR\",\n        \"defaultStyle\": {\n            \"name\": \"myStyle\",\n            \"href\": \"http://localhost:8080/geoserver/rest/styles/myStyle.json\"\n        },\n        \"resource\": {\n            \"@class\": \"featureType\",\n            \"name\": \"QXYJ_WS:D20190601\",\n            \"href\": \"http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/datastores/QXYJ/featuretypes/D20190601.json\"\n        },\n        \"queryable\": true,\n        \"opaque\": false,\n        \"attribution\": {\n            \"logoWidth\": 0,\n            \"logoHeight\": 0\n        }\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/cite/layers/D20190810",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"cite",
+										"layers",
+										"D20190810"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "图层组",
+					"item": [
+						{
+							"name": "获取所有图层组信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layergroups.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layergroups.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增图层组",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"layerGroup\": {\n        \"name\": \"spearfishGrou2223p\",\n        \"mode\": \"SINGLE\",\n        \"title\": \"Spearfish\",\n        \"abstractTxt\": \"Spearfish City in Lawrence County, South Dakota\\r\\n\\r\\nThe area covered by the data set is in the vicinity of Spearfish and includes a majority of the Black Hills National Forest (i.e., Mount Rushmore).\",\n        \"publishables\": {\n            \"published\": [\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"guizhou:layer20200915170617\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/guizhou/layers/layer20200915170617.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"guizhou:layer20200919214612\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/guizhou/layers/layer20200919214612.json\"\n                }\n            ]\n        },\n        \"styles\": {\n            \"style\": [\n                \"null\",\n                \"null\"\n            ]\n        },\n        \"bounds\": {\n            \"minx\": -179.99999999999997,\n            \"maxx\": 179.99999999996405,\n            \"miny\": -89.99999999998201,\n            \"maxy\": 90,\n            \"crs\": \"EPSG:4326\"\n        },\n        \"metadata\": {\n            \"entry\": {\n                \"@key\": \"rawStyleList\",\n                \"$\": \"\"\n            }\n        },\n        \"dateCreated\": \"2020-09-19 13:35:00.809 UTC\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layergroups",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layergroups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取单个图层组详细信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layergroups/spearfishGroup.xml",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layergroups",
+										"spearfishGroup.xml"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改图层组",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"layerGroup\": {\n        \"name\": \"spearfish\",\n        \"mode\": \"SINGLE\",\n        \"title\": \"Spearfish\",\n        \"abstractTxt\": \"Spearfish City in Lawrence County, South Dakota\\r\\n\\r\\nThe area covered by the data set is in the vicinity of Spearfish and includes a majority of the Black Hills National Forest (i.e., Mount Rushmore).\",\n        \"publishables\": {\n            \"published\": [\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:sfdem\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/sfdem.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:streams\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/streams.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:roads\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/roads.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:restricted\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/restricted.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:archsites\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/archsites.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:bugsites\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/bugsites.json\"\n                }\n            ]\n        },\n        \"styles\": {\n            \"style\": [\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\"\n            ]\n        },\n        \"bounds\": {\n            \"minx\": 589425.9342365642,\n            \"maxx\": 609518.6719560538,\n            \"miny\": 4913959.224611808,\n            \"maxy\": 4928082.949945881,\n            \"crs\": {\n                \"@class\": \"projected\",\n                \"$\": \"EPSG:26713\"\n            }\n        },\n        \"metadata\": {\n            \"entry\": {\n                \"@key\": \"rawStyleList\",\n                \"$\": \"\"\n            }\n        }\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layergroups/spearfish",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layergroups",
+										"spearfish"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除图层组",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"layerGroup\": {\n        \"name\": \"spearfish1111\",\n        \"mode\": \"SINGLE\",\n        \"title\": \"Spearfish\",\n        \"abstractTxt\": \"Spearfish City in Lawrence County, South Dakota\\r\\n\\r\\nThe area covered by the data set is in the vicinity of Spearfish and includes a majority of the Black Hills National Forest (i.e., Mount Rushmore).\",\n        \"publishables\": {\n            \"published\": [\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:sfdem\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/sfdem.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:streams\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/streams.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:roads\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/roads.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:restricted\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/restricted.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:archsites\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/archsites.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:bugsites\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/bugsites.json\"\n                }\n            ]\n        },\n        \"styles\": {\n            \"style\": [\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\"\n            ]\n        },\n        \"bounds\": {\n            \"minx\": 589425.9342365642,\n            \"maxx\": 609518.6719560538,\n            \"miny\": 4913959.224611808,\n            \"maxy\": 4928082.949945881\n        },\n        \"metadata\": {\n            \"entry\": {\n                \"@key\": \"rawStyleList\",\n                \"$\": \"\"\n            }\n        }\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layergroups/spearfish111111",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layergroups",
+										"spearfish111111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取工作空间中图层组详细信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/sf/layergroups",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"sf",
+										"layergroups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "图层组添加到工作空间",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"layerGroup\": {\n        \"name\": \"spearfish1111\",\n        \"mode\": \"SINGLE\",\n        \"title\": \"Spearfish\",\n        \"abstractTxt\": \"Spearfish City in Lawrence County, South Dakota\\r\\n\\r\\nThe area covered by the data set is in the vicinity of Spearfish and includes a majority of the Black Hills National Forest (i.e., Mount Rushmore).\",\n        \"publishables\": {\n            \"published\": [\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:sfdem\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/sfdem.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:streams\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/streams.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:roads\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/roads.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:restricted\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/restricted.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:archsites\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/archsites.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:bugsites\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/bugsites.json\"\n                }\n            ]\n        },\n        \"styles\": {\n            \"style\": [\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\"\n            ]\n        },\n        \"bounds\": {\n            \"minx\": 589425.9342365642,\n            \"maxx\": 609518.6719560538,\n            \"miny\": 4913959.224611808,\n            \"maxy\": 4928082.949945881,\n            \"crs\": {\n                \"@class\": \"projected\",\n                \"$\": \"EPSG:26713\"\n            }\n        },\n        \"metadata\": {\n            \"entry\": {\n                \"@key\": \"rawStyleList\",\n                \"$\": \"\"\n            }\n        }\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/sf/layergroups",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"sf",
+										"layergroups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除工作空间中图层组",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/sf/layergroups/spearfish1111",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"sf",
+										"layergroups",
+										"spearfish1111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据图层组名称查询工作空间中图层组详细信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/sf/layergroups/spearfish",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"sf",
+										"layergroups",
+										"spearfish"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据图层组名称修改工作空间中图层组详细信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"layerGroup\": {\n        \"name\": \"spearfish\",\n        \"mode\": \"SINGLE\",\n        \"title\": \"Spearfish\",\n        \"abstractTxt\": \"Spearfish City in Lawrence County, South Dakota\\r\\n\\r\\nThe area covered by the data set is in the vicinity of Spearfish and includes a majority of the Black Hills National Forest (i.e., Mount Rushmore).\",\n        \"workspace\": {\n            \"name\": \"sf\"\n        },\n        \"publishables\": {\n            \"published\": [\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:sfdem\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/sfdem.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:streams\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/streams.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:roads\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/roads.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:restricted\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/restricted.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:archsites\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/archsites.json\"\n                },\n                {\n                    \"@type\": \"layer\",\n                    \"name\": \"sf:bugsites\",\n                    \"href\": \"http://localhost:8080/geoserver/rest/workspaces/sf/layers/bugsites.json\"\n                }\n            ]\n        },\n        \"styles\": {\n            \"style\": [\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\",\n                \"null\"\n            ]\n        },\n        \"bounds\": {\n            \"minx\": 589425.9342365642,\n            \"maxx\": 609518.6719560538,\n            \"miny\": 4913959.224611808,\n            \"maxy\": 4928082.949945881,\n            \"crs\": {\n                \"@class\": \"projected\",\n                \"$\": \"EPSG:26713\"\n            }\n        },\n        \"metadata\": {\n            \"entry\": {\n                \"@key\": \"rawStyleList\",\n                \"$\": \"\"\n            }\n        }\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/sf/layergroups/spearfish",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"sf",
+										"layergroups",
+										"spearfish"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "样式",
+					"item": [
+						{
+							"name": "获取所有的样式列表",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/styles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"styles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取样式",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/styles/myStyle.sld",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"styles",
+										"myStyle.sld"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增样式",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/vnd.ogc.sld+xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/styles?filename=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n<StyledLayerDescriptor version=\"1.0.0\" \n    xsi:schemaLocation=\"http://www.opengis.net/sld StyledLayerDescriptor.xsd\" \n    xmlns=\"http://www.opengis.net/sld\" \n    xmlns:ogc=\"http://www.opengis.net/ogc\" \n    xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <NamedLayer>\n    <Name>Attribute-based polygon</Name>\n    <UserStyle>\n      <Title>SLD Cook Book: Attribute-based polygon</Title>\n      <FeatureTypeStyle>\n        <Rule>\n          <Name>SmallPop</Name>\n          <Title>Less Than 3</Title>\n          <ogc:Filter>\n            <ogc:PropertyIsLessThan>\n              <ogc:PropertyName>level</ogc:PropertyName>\n              <ogc:Literal>3</ogc:Literal>\n            </ogc:PropertyIsLessThan>\n          </ogc:Filter>\n          <PolygonSymbolizer>\n            <Fill>\n              <CssParameter name=\"fill\">%23FFFFFF</CssParameter>\n            </Fill>\n          </PolygonSymbolizer>\n        </Rule>\n        <Rule>\n          <Name>MediumPop</Name>\n          <Title>3 to 4</Title>\n          <ogc:Filter>\n            <ogc:And>\n              <ogc:PropertyIsGreaterThanOrEqualTo>\n                <ogc:PropertyName>level</ogc:PropertyName>\n                <ogc:Literal>3</ogc:Literal>\n              </ogc:PropertyIsGreaterThanOrEqualTo>\n              <ogc:PropertyIsLessThan>\n                <ogc:PropertyName>level</ogc:PropertyName>\n                <ogc:Literal>4</ogc:Literal>\n              </ogc:PropertyIsLessThan>\n            </ogc:And>\n          </ogc:Filter>\n          <PolygonSymbolizer>\n            <Fill>\n              <CssParameter name=\"fill\">%23FFFF00</CssParameter>\n            </Fill>\n          </PolygonSymbolizer>\n        </Rule>\n\t\t<Rule>\n          <Name>MediumPop</Name>\n          <Title>4 to 5</Title>\n          <ogc:Filter>\n            <ogc:And>\n              <ogc:PropertyIsGreaterThanOrEqualTo>\n                <ogc:PropertyName>level</ogc:PropertyName>\n                <ogc:Literal>4</ogc:Literal>\n              </ogc:PropertyIsGreaterThanOrEqualTo>\n              <ogc:PropertyIsLessThan>\n                <ogc:PropertyName>level</ogc:PropertyName>\n                <ogc:Literal>5</ogc:Literal>\n              </ogc:PropertyIsLessThan>\n            </ogc:And>\n          </ogc:Filter>\n          <PolygonSymbolizer>\n            <Fill>\n              <CssParameter name=\"fill\">%23FFA500</CssParameter>\n            </Fill>\n          </PolygonSymbolizer>\n        </Rule>\n        <Rule>\n          <Name>LargePop</Name>\n          <Title>Greater Than 5</Title>\n          <ogc:Filter>\n            <ogc:PropertyIsGreaterThanOrEqualTo>\n              <ogc:PropertyName>level</ogc:PropertyName>\n              <ogc:Literal>5</ogc:Literal>\n            </ogc:PropertyIsGreaterThanOrEqualTo>\n          </ogc:Filter>\n          <PolygonSymbolizer>\n            <Fill>\n              <CssParameter name=\"fill\">%23FF0000</CssParameter>\n            </Fill>\n          </PolygonSymbolizer>\n        </Rule>\n      </FeatureTypeStyle>\n    </UserStyle>\n  </NamedLayer>\n</StyledLayerDescriptor>\n&name=test123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"styles"
+									],
+									"query": [
+										{
+											"key": "filename",
+											"value": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n<StyledLayerDescriptor version=\"1.0.0\" \n    xsi:schemaLocation=\"http://www.opengis.net/sld StyledLayerDescriptor.xsd\" \n    xmlns=\"http://www.opengis.net/sld\" \n    xmlns:ogc=\"http://www.opengis.net/ogc\" \n    xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <NamedLayer>\n    <Name>Attribute-based polygon</Name>\n    <UserStyle>\n      <Title>SLD Cook Book: Attribute-based polygon</Title>\n      <FeatureTypeStyle>\n        <Rule>\n          <Name>SmallPop</Name>\n          <Title>Less Than 3</Title>\n          <ogc:Filter>\n            <ogc:PropertyIsLessThan>\n              <ogc:PropertyName>level</ogc:PropertyName>\n              <ogc:Literal>3</ogc:Literal>\n            </ogc:PropertyIsLessThan>\n          </ogc:Filter>\n          <PolygonSymbolizer>\n            <Fill>\n              <CssParameter name=\"fill\">%23FFFFFF</CssParameter>\n            </Fill>\n          </PolygonSymbolizer>\n        </Rule>\n        <Rule>\n          <Name>MediumPop</Name>\n          <Title>3 to 4</Title>\n          <ogc:Filter>\n            <ogc:And>\n              <ogc:PropertyIsGreaterThanOrEqualTo>\n                <ogc:PropertyName>level</ogc:PropertyName>\n                <ogc:Literal>3</ogc:Literal>\n              </ogc:PropertyIsGreaterThanOrEqualTo>\n              <ogc:PropertyIsLessThan>\n                <ogc:PropertyName>level</ogc:PropertyName>\n                <ogc:Literal>4</ogc:Literal>\n              </ogc:PropertyIsLessThan>\n            </ogc:And>\n          </ogc:Filter>\n          <PolygonSymbolizer>\n            <Fill>\n              <CssParameter name=\"fill\">%23FFFF00</CssParameter>\n            </Fill>\n          </PolygonSymbolizer>\n        </Rule>\n\t\t<Rule>\n          <Name>MediumPop</Name>\n          <Title>4 to 5</Title>\n          <ogc:Filter>\n            <ogc:And>\n              <ogc:PropertyIsGreaterThanOrEqualTo>\n                <ogc:PropertyName>level</ogc:PropertyName>\n                <ogc:Literal>4</ogc:Literal>\n              </ogc:PropertyIsGreaterThanOrEqualTo>\n              <ogc:PropertyIsLessThan>\n                <ogc:PropertyName>level</ogc:PropertyName>\n                <ogc:Literal>5</ogc:Literal>\n              </ogc:PropertyIsLessThan>\n            </ogc:And>\n          </ogc:Filter>\n          <PolygonSymbolizer>\n            <Fill>\n              <CssParameter name=\"fill\">%23FFA500</CssParameter>\n            </Fill>\n          </PolygonSymbolizer>\n        </Rule>\n        <Rule>\n          <Name>LargePop</Name>\n          <Title>Greater Than 5</Title>\n          <ogc:Filter>\n            <ogc:PropertyIsGreaterThanOrEqualTo>\n              <ogc:PropertyName>level</ogc:PropertyName>\n              <ogc:Literal>5</ogc:Literal>\n            </ogc:PropertyIsGreaterThanOrEqualTo>\n          </ogc:Filter>\n          <PolygonSymbolizer>\n            <Fill>\n              <CssParameter name=\"fill\">%23FF0000</CssParameter>\n            </Fill>\n          </PolygonSymbolizer>\n        </Rule>\n      </FeatureTypeStyle>\n    </UserStyle>\n  </NamedLayer>\n</StyledLayerDescriptor>\n"
+										},
+										{
+											"key": "name",
+											"value": "test123"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改样式",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/zip"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {}
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/styles/dStyle?name=roads_style&filename=polygon_attributebasedpolygon.sld",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"styles",
+										"dStyle"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "roads_style"
+										},
+										{
+											"key": "filename",
+											"value": "polygon_attributebasedpolygon.sld"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除样式",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/styles/dddd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"styles",
+										"dddd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取工作空间所有样式列表",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/DITU/styles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"DITU",
+										"styles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增工作空间中样式",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/zip"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {}
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/DITU/styles?name=dStyleddd&filename=dddddd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"DITU",
+										"styles"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "dStyleddd"
+										},
+										{
+											"key": "filename",
+											"value": "dddddd"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除工作空间中样式",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/DITU/styles/dStyleddd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"DITU",
+										"styles",
+										"dStyleddd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改工作空间中样式",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/zip"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {}
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/DITU/styles/dStyleddd?name=roads_style&filename=polygon_attributebasedpolygon.sld",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"DITU",
+										"styles",
+										"dStyleddd"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "roads_style"
+										},
+										{
+											"key": "filename",
+											"value": "polygon_attributebasedpolygon.sld"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询工作空间样式具体内容",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/DITU/styles/COUNTRY.WP.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"DITU",
+										"styles",
+										"COUNTRY.WP.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查看图层包含样式",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layers/tiger:giant_polygon/styles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layers",
+										"tiger:giant_polygon",
+										"styles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "给图层新增样式",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<style>\n\t<name>myStyle</name>\n\t<filename>myStyle.sld</filename>\n</style>"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/layers/cite:D20190810/styles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"layers",
+										"cite:D20190810",
+										"styles"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "图层要素",
+					"item": [
+						{
+							"name": "获取单个图层要素信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/workspaces/tiger/datastores/nyc/featuretypes/giant_polygon.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"workspaces",
+										"tiger",
+										"datastores",
+										"nyc",
+										"featuretypes",
+										"giant_polygon.json"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "设置",
+			"item": [
+				{
+					"name": "wms",
+					"item": [
+						{
+							"name": "获取wms设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wms/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wms",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改wms设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"wms\": {\n        \"enabled\": true,\n        \"name\": \"WMS\",\n        \"title\": \"GeoServer Web Map Service\",\n        \"maintainer\": \"http://geoserver.org/comm\",\n        \"abstrct\": \"A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS\",\n        \"accessConstraints\": \"NONE\",\n        \"fees\": \"NONE\",\n        \"versions\": {\n            \"org.geotools.util.Version\": [\n                {\n                    \"version\": \"1.1.1\"\n                },\n                {\n                    \"version\": \"1.3.0\"\n                }\n            ]\n        },\n        \"keywords\": {\n            \"string\": [\n                \"WFS\",\n                \"WMS\",\n                \"GEOSERVER\"\n            ]\n        },\n        \"metadataLink\": \"\",\n        \"citeCompliant\": false,\n        \"onlineResource\": \"http://geoserver.org\",\n        \"schemaBaseURL\": \"http://schemas.opengis.net\",\n        \"verbose\": false,\n        \"metadata\": {\n            \"entry\": [\n                {\n                    \"@key\": \"kmlSuperoverlayMode\",\n                    \"$\": \"auto\"\n                },\n                {\n                    \"@key\": \"kmlReflectorMode\",\n                    \"$\": \"refresh\"\n                },\n                {\n                    \"@key\": \"loopContinuously\",\n                    \"$\": \"false\"\n                },\n                {\n                    \"@key\": \"svgAntiAlias\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"kmlPlacemark\",\n                    \"$\": \"false\"\n                },\n                {\n                    \"@key\": \"kmlKmscore\",\n                    \"$\": \"40\"\n                },\n                {\n                    \"@key\": \"mapWrapping\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"pngCompression\",\n                    \"$\": \"25\"\n                },\n                {\n                    \"@key\": \"jpegCompression\",\n                    \"$\": \"25\"\n                },\n                {\n                    \"@key\": \"advancedProjectionHandling\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"maxAllowedFrames\",\n                    \"$\": \"2147483647\"\n                },\n                {\n                    \"@key\": \"kmlAttr\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"svgRenderer\",\n                    \"$\": \"Batik\"\n                },\n                {\n                    \"@key\": \"disposalMethod\",\n                    \"$\": \"none\"\n                },\n                {\n                    \"@key\": \"scalehintMapunitsPixel\",\n                    \"$\": \"false\"\n                },\n                {\n                    \"@key\": \"framesDelay\",\n                    \"$\": \"1000\"\n                }\n            ]\n        },\n        \"watermark\": {\n            \"enabled\": false,\n            \"position\": \"BOT_RIGHT\",\n            \"transparency\": 0\n        },\n        \"interpolation\": \"Nearest\",\n        \"getFeatureInfoMimeTypeCheckingEnabled\": false,\n        \"getMapMimeTypeCheckingEnabled\": false,\n        \"dynamicStylingDisabled\": false,\n        \"featuresReprojectionDisabled\": false,\n        \"maxBuffer\": 25,\n        \"maxRequestMemory\": 65536,\n        \"maxRenderingTime\": 60,\n        \"maxRenderingErrors\": 1000\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wms/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wms",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取工作空间中wms设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wms/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wms",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑工作空间中wms设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"wms\": {\n        \"enabled\": true,\n        \"name\": \"WMS\",\n        \"title\": \"GeoServer Web Map Service\",\n        \"maintainer\": \"http://geoserver.org/comm\",\n        \"workspace\": \"QXYJ_WS\",\n        \"abstrct\": \"A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS\",\n        \"accessConstraints\": \"NONE\",\n        \"fees\": \"NONE\",\n        \"versions\": {\n            \"org.geotools.util.Version\": [\n                {\n                    \"version\": \"1.1.1\"\n                },\n                {\n                    \"version\": \"1.3.0\"\n                }\n            ]\n        },\n        \"keywords\": {\n            \"string\": [\n                \"WFS\",\n                \"WMS\",\n                \"GEOSERVER\"\n            ]\n        },\n        \"metadataLink\": \"\",\n        \"citeCompliant\": false,\n        \"onlineResource\": \"http://geoserver.org\",\n        \"schemaBaseURL\": \"http://schemas.opengis.net\",\n        \"verbose\": false,\n        \"metadata\": {\n            \"entry\": [\n                {\n                    \"@key\": \"kmlSuperoverlayMode\",\n                    \"$\": \"auto\"\n                },\n                {\n                    \"@key\": \"kmlReflectorMode\",\n                    \"$\": \"refresh\"\n                },\n                {\n                    \"@key\": \"loopContinuously\",\n                    \"$\": \"false\"\n                },\n                {\n                    \"@key\": \"svgAntiAlias\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"kmlPlacemark\",\n                    \"$\": \"false\"\n                },\n                {\n                    \"@key\": \"kmlKmscore\",\n                    \"$\": \"40\"\n                },\n                {\n                    \"@key\": \"mapWrapping\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"pngCompression\",\n                    \"$\": \"25\"\n                },\n                {\n                    \"@key\": \"jpegCompression\",\n                    \"$\": \"25\"\n                },\n                {\n                    \"@key\": \"advancedProjectionHandling\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"maxAllowedFrames\",\n                    \"$\": \"2147483647\"\n                },\n                {\n                    \"@key\": \"kmlAttr\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"svgRenderer\",\n                    \"$\": \"Batik\"\n                },\n                {\n                    \"@key\": \"disposalMethod\",\n                    \"$\": \"none\"\n                },\n                {\n                    \"@key\": \"scalehintMapunitsPixel\",\n                    \"$\": \"false\"\n                },\n                {\n                    \"@key\": \"framesDelay\",\n                    \"$\": \"1000\"\n                }\n            ]\n        },\n        \"bboxForEachCRS\": false,\n        \"watermark\": {\n            \"enabled\": false,\n            \"position\": \"BOT_RIGHT\",\n            \"transparency\": 0\n        },\n        \"interpolation\": \"Nearest\",\n        \"getFeatureInfoMimeTypeCheckingEnabled\": false,\n        \"getMapMimeTypeCheckingEnabled\": false,\n        \"dynamicStylingDisabled\": false,\n        \"featuresReprojectionDisabled\": false,\n        \"maxBuffer\": 25,\n        \"maxRequestMemory\": 65536,\n        \"maxRenderingTime\": 60,\n        \"maxRenderingErrors\": 1000,\n        \"maxRequestedDimensionValues\": 100\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wms/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wms",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除工作空间中wms设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wms/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wms",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "wfs",
+					"item": [
+						{
+							"name": "获取wfs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wfs/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wfs",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改wfs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"wfs\": {\n        \"enabled\": true,\n        \"name\": \"WFS\",\n        \"title\": \"GeoServer Web Feature Service\",\n        \"maintainer\": \"http://geoserver.org/comm\",\n        \"abstrct\": \"This is the reference implementation of WFS 1.0.0 and WFS 1.1.0, supports all WFS operations including Transaction.\",\n        \"accessConstraints\": \"NONE\",\n        \"fees\": \"NONE\",\n        \"versions\": {\n            \"org.geotools.util.Version\": [\n                {\n                    \"version\": \"1.0.0\"\n                },\n                {\n                    \"version\": \"1.1.0\"\n                },\n                {\n                    \"version\": \"2.0.0\"\n                }\n            ]\n        },\n        \"keywords\": {\n            \"string\": [\n                \"WFS\",\n                \"WMS\",\n                \"GEOSERVER\"\n            ]\n        },\n        \"metadataLink\": \"\",\n        \"citeCompliant\": false,\n        \"onlineResource\": \"http://geoserver.org\",\n        \"schemaBaseURL\": \"http://schemas.opengis.net\",\n        \"verbose\": false,\n        \"gml\": {\n            \"entry\": [\n                {\n                    \"version\": \"V_10\",\n                    \"gml\": {\n                        \"srsNameStyle\": [\n                            \"XML\"\n                        ],\n                        \"overrideGMLAttributes\": true\n                    }\n                },\n                {\n                    \"version\": \"V_11\",\n                    \"gml\": {\n                        \"srsNameStyle\": [\n                            \"URN\"\n                        ],\n                        \"overrideGMLAttributes\": false\n                    }\n                },\n                {\n                    \"version\": \"V_20\",\n                    \"gml\": {\n                        \"srsNameStyle\": [\n                            \"URN2\"\n                        ],\n                        \"overrideGMLAttributes\": false\n                    }\n                }\n            ]\n        },\n        \"serviceLevel\": \"COMPLETE\",\n        \"maxFeatures\": 1000000,\n        \"featureBounding\": false,\n        \"canonicalSchemaLocation\": false,\n        \"encodeFeatureMember\": false,\n        \"hitsIgnoreMaxFeatures\": false\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wfs/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wfs",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取工作空间中wfs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wms/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wms",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑工作空间中wfs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"wms\": {\n        \"workspace\": {\n            \"name\": \"QXYJ_WS\"\n        },\n        \"enabled\": true,\n        \"name\": \"WMS\",\n        \"title\": \"GeoServer Web Map Service\",\n        \"maintainer\": \"http://geoserver.org/comm\",\n        \"abstrct\": \"A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS\",\n        \"accessConstraints\": \"NONE\",\n        \"fees\": \"NONE\",\n        \"versions\": {\n            \"org.geotools.util.Version\": [\n                {\n                    \"version\": \"1.1.1\"\n                },\n                {\n                    \"version\": \"1.3.0\"\n                }\n            ]\n        },\n        \"keywords\": {\n            \"string\": [\n                \"WFS\",\n                \"WMS\",\n                \"GEOSERVER\"\n            ]\n        },\n        \"metadataLink\": \"\",\n        \"citeCompliant\": false,\n        \"onlineResource\": \"http://geoserver.org\",\n        \"schemaBaseURL\": \"http://schemas.opengis.net\",\n        \"verbose\": false,\n        \"metadata\": {\n            \"entry\": [\n                {\n                    \"@key\": \"kmlSuperoverlayMode\",\n                    \"$\": \"auto\"\n                },\n                {\n                    \"@key\": \"kmlReflectorMode\",\n                    \"$\": \"refresh\"\n                },\n                {\n                    \"@key\": \"loopContinuously\",\n                    \"$\": \"false\"\n                },\n                {\n                    \"@key\": \"svgAntiAlias\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"kmlPlacemark\",\n                    \"$\": \"false\"\n                },\n                {\n                    \"@key\": \"kmlKmscore\",\n                    \"$\": \"40\"\n                },\n                {\n                    \"@key\": \"mapWrapping\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"pngCompression\",\n                    \"$\": \"25\"\n                },\n                {\n                    \"@key\": \"jpegCompression\",\n                    \"$\": \"25\"\n                },\n                {\n                    \"@key\": \"advancedProjectionHandling\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"maxAllowedFrames\",\n                    \"$\": \"2147483647\"\n                },\n                {\n                    \"@key\": \"kmlAttr\",\n                    \"$\": \"true\"\n                },\n                {\n                    \"@key\": \"svgRenderer\",\n                    \"$\": \"Batik\"\n                },\n                {\n                    \"@key\": \"disposalMethod\",\n                    \"$\": \"none\"\n                },\n                {\n                    \"@key\": \"scalehintMapunitsPixel\",\n                    \"$\": \"false\"\n                },\n                {\n                    \"@key\": \"framesDelay\",\n                    \"$\": \"1000\"\n                }\n            ]\n        },\n        \"bboxForEachCRS\": false,\n        \"watermark\": {\n            \"enabled\": false,\n            \"position\": \"BOT_RIGHT\",\n            \"transparency\": 0\n        },\n        \"interpolation\": \"Nearest\",\n        \"getFeatureInfoMimeTypeCheckingEnabled\": false,\n        \"getMapMimeTypeCheckingEnabled\": false,\n        \"dynamicStylingDisabled\": false,\n        \"featuresReprojectionDisabled\": false,\n        \"maxBuffer\": 25,\n        \"maxRequestMemory\": 65536,\n        \"maxRenderingTime\": 60,\n        \"maxRenderingErrors\": 1000,\n        \"maxRequestedDimensionValues\": 100\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wms/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wms",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除工作空间中wfs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wfs/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wfs",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "wcs",
+					"item": [
+						{
+							"name": "获取wcs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wcs/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wcs",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改wcs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"wcs\": {\n        \"enabled\": true,\n        \"name\": \"WCS\",\n        \"title\": \"Web Coverage Service\",\n        \"maintainer\": \"http://geoserver.org/comm\",\n        \"abstrct\": \"This server implements the WCS specification 1.0 and 1.1.1, it's reference implementation of WCS 1.1.1. All layers published by this service are available on WMS also.\\n     \",\n        \"accessConstraints\": \"NONE\",\n        \"fees\": \"NONE\",\n        \"versions\": {\n            \"org.geotools.util.Version\": [\n                {\n                    \"version\": \"1.0.0\"\n                },\n                {\n                    \"version\": \"1.1.1\"\n                },\n                {\n                    \"version\": \"2.0.1\"\n                }\n            ]\n        },\n        \"keywords\": {\n            \"string\": [\n                \"WCS\",\n                \"WMS\",\n                \"GEOSERVER\"\n            ]\n        },\n        \"metadataLink\": {\n            \"type\": \"undef\",\n            \"about\": \"http://geoserver.sourceforge.net/html/index.php\",\n            \"metadataType\": \"other\"\n        },\n        \"citeCompliant\": false,\n        \"onlineResource\": \"http://geoserver.org\",\n        \"schemaBaseURL\": \"http://schemas.opengis.net\",\n        \"verbose\": false,\n        \"gmlPrefixing\": false,\n        \"latLon\": false,\n        \"maxInputMemory\": 0,\n        \"maxOutputMemory\": 0\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wcs/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wcs",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取工作空间中wcs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wcs/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wcs",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑工作空间中wcs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"wcs\": {\n        \"enabled\": true,\n        \"name\": \"WCS\",\n        \"title\": \"Web Coverage Service\",\n        \"maintainer\": \"http://geoserver.org/comm\",\n        \"abstrct\": \"This server implements the WCS specification 1.0 and 1.1.1, it's reference implementation of WCS 1.1.1. All layers published by this service are available on WMS also.\\n     \",\n        \"accessConstraints\": \"NONE\",\n        \"fees\": \"NONE\",\n        \"versions\": {\n            \"org.geotools.util.Version\": [\n                {\n                    \"version\": \"1.0.0\"\n                },\n                {\n                    \"version\": \"1.1.1\"\n                },\n                {\n                    \"version\": \"2.0.1\"\n                }\n            ]\n        },\n        \"keywords\": {\n            \"string\": [\n                \"WCS\",\n                \"WMS\",\n                \"GEOSERVER\"\n            ]\n        },\n        \"metadataLink\": {\n            \"type\": \"undef\",\n            \"about\": \"http://geoserver.sourceforge.net/html/index.php\",\n            \"metadataType\": \"other\"\n        },\n        \"citeCompliant\": false,\n        \"onlineResource\": \"http://geoserver.org\",\n        \"schemaBaseURL\": \"http://schemas.opengis.net\",\n        \"verbose\": false,\n        \"gmlPrefixing\": false,\n        \"latLon\": false,\n        \"maxInputMemory\": 0,\n        \"maxOutputMemory\": 0\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wcs/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wcs",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除工作空间中wcs设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wcs/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wcs",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "wmts",
+					"item": [
+						{
+							"name": "获取wmts设置信息(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wmts/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wmts",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改wmts设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wmts/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wmts",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取工作空间中wmts设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wmts/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wmts",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑工作空间中wmts设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"wcs\": {\n        \"enabled\": true,\n        \"name\": \"WCS\",\n        \"title\": \"Web Coverage Service\",\n        \"maintainer\": \"http://geoserver.org/comm\",\n        \"abstrct\": \"This server implements the WCS specification 1.0 and 1.1.1, it's reference implementation of WCS 1.1.1. All layers published by this service are available on WMS also.\\n     \",\n        \"accessConstraints\": \"NONE\",\n        \"fees\": \"NONE\",\n        \"versions\": {\n            \"org.geotools.util.Version\": [\n                {\n                    \"version\": \"1.0.0\"\n                },\n                {\n                    \"version\": \"1.1.1\"\n                },\n                {\n                    \"version\": \"2.0.1\"\n                }\n            ]\n        },\n        \"keywords\": {\n            \"string\": [\n                \"WCS\",\n                \"WMS\",\n                \"GEOSERVER\"\n            ]\n        },\n        \"metadataLink\": {\n            \"type\": \"undef\",\n            \"about\": \"http://geoserver.sourceforge.net/html/index.php\",\n            \"metadataType\": \"other\"\n        },\n        \"citeCompliant\": false,\n        \"onlineResource\": \"http://geoserver.org\",\n        \"schemaBaseURL\": \"http://schemas.opengis.net\",\n        \"verbose\": false,\n        \"gmlPrefixing\": false,\n        \"latLon\": false,\n        \"maxInputMemory\": 0,\n        \"maxOutputMemory\": 0\n    }\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wmts/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wmts",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除工作空间中wmts设置信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/services/wmts/workspaces/QXYJ_WS/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"services",
+										"wmts",
+										"workspaces",
+										"QXYJ_WS",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "全局设置",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/settings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改全局设置",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"global\": {\n        \"settings\": {\n            \"id\": \"SettingsInfoImpl-68f6c583:154ca420c47:-8000\",\n            \"contact\": {\n                \"addressCity\": \"Alexandria\",\n                \"addressCountry\": \"Egypt\",\n                \"addressType\": \"Work\",\n                \"contactEmail\": \"claudius.ptolomaeus@gmail.com\",\n                \"contactOrganization\": \"The Ancient Geographers\",\n                \"contactPerson\": \"Claudius Ptolomaeus\",\n                \"contactPosition\": \"Chief Geographer\"\n            },\n            \"charset\": \"UTF-8\",\n            \"numDecimals\": 8,\n            \"onlineResource\": \"http://geoserver.org\",\n            \"verbose\": false,\n            \"verboseExceptions\": false,\n            \"localWorkspaceIncludesPrefix\": false\n        },\n        \"jai\": {\n            \"allowInterpolation\": false,\n            \"recycling\": false,\n            \"tilePriority\": 5,\n            \"tileThreads\": 7,\n            \"memoryCapacity\": 0.5,\n            \"memoryThreshold\": 0.75,\n            \"imageIOCache\": false,\n            \"pngAcceleration\": true,\n            \"jpegAcceleration\": true,\n            \"allowNativeMosaic\": false,\n            \"allowNativeWarp\": false\n        },\n        \"coverageAccess\": {\n            \"maxPoolSize\": 10,\n            \"corePoolSize\": 5,\n            \"keepAliveTime\": 30000,\n            \"queueType\": \"UNBOUNDED\",\n            \"imageIOCacheThreshold\": 10240\n        },\n        \"updateSequence\": 2491,\n        \"featureTypeCacheSize\": 0,\n        \"globalServices\": true,\n        \"useHeadersProxyURL\": false,\n        \"xmlPostRequestLogBufferSize\": 1024,\n        \"resourceErrorHandling\": \"SKIP_MISCONFIGURED_LAYERS\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/settings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取联系人信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/settings/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"settings",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改联系人信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n    \"contact\": {\n        \"addressCity\": \"Alexandria\",\n        \"addressCountry\": \"Egypt\",\n        \"addressType\": \"Work\",\n        \"contactEmail\": \"claudius.ptolomaeus@gmail.com\",\n        \"contactOrganization\": \"The Ancient Geographers\",\n        \"contactPerson\": \"Claudius Ptolomaeus\",\n        \"contactPosition\": \"Chief Geographer\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/settings/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"settings",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取工作空间设置信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/settings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"workspaces",
+								"QXYJ_WS",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "新增工作空间设置信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"settings\": {\n        \"contact\": {\n            \"id\": \"contact\"\n        },\n        \"charset\": \"UTF-8\",\n        \"numDecimals\": 4,\n        \"verbose\": false,\n        \"verboseExceptions\": false,\n        \"localWorkspaceIncludesPrefix\": false\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/settings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"workspaces",
+								"QXYJ_WS",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取工作空间设置信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"settings\": {\n        \"contact\": {\n            \"id\": \"contact\"\n        },\n        \"charset\": \"UTF-8\",\n        \"numDecimals\": 4,\n        \"verbose\": false,\n        \"verboseExceptions\": false,\n        \"localWorkspaceIncludesPrefix\": false\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/settings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"workspaces",
+								"QXYJ_WS",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除工作空间设置信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/workspaces/QXYJ_WS/settings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"workspaces",
+								"QXYJ_WS",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "安全",
+			"item": [
+				{
+					"name": "用户",
+					"item": [
+						{
+							"name": "删除服务用户组(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/service/aaaa/groups/testgroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"service",
+										"aaaa",
+										"groups",
+										"testgroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增服务用户组(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/service/aaaa/groups/testgroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"service",
+										"aaaa",
+										"groups",
+										"testgroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除用户组(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/groups/testgroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"groups",
+										"testgroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增用户组(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/groups/testgroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"groups",
+										"testgroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询服务下的用户组",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/service/aaaa/groups/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"service",
+										"aaaa",
+										"groups",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询所有的用户组",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/groups/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"groups",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据用户名和服务名删除用户(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/service/aaaa/users/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"service",
+										"aaaa",
+										"users",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据用户名和服务名修改用户(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/service/default/users/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"service",
+										"default",
+										"users",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据用户名和服务名查询用户(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/service/default/users/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"service",
+										"default",
+										"users",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据用户名删除用户(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "bbb",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "aaa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/users/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"users",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据用户名修改用户(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "bbb",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "aaa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<user>\r\n\t<userName>aaa</userName>\r\n\t<password>bbb</password>\r\n\t<enabled>true</enabled>\r\n</user>"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/users/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"users",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据用户名查询用户(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "bbb",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "aaa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/users/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"users",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增service下用户",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<user>\r\n\t<userName>ccc</userName>\r\n\t<password>ddd</password>\r\n\t<enabled>true</enabled>\r\n</user>"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/service/aaaa/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"service",
+										"aaaa",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询service下所有用户",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/service/aaaa/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"service",
+										"aaaa",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除用户(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/users/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"users",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增用户",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<user>\r\n\t<userName>aaa</userName>\r\n\t<password>bbb</password>\r\n\t<enabled>true</enabled>\r\n</user>"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取用户列表",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "bbb",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "aaa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "角色",
+					"item": [
+						{
+							"name": "查询所有的角色",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据用户名查询角色信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/user/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"user",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询组下所有角色",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/group/testGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"group",
+										"testGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询service下所有角色(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/service/default/roles/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"service",
+										"default",
+										"roles",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询service下用户角色(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/service/aaaa/user/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"service",
+										"aaaa",
+										"user",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询service下用户组角色(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/service/default/group/testGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"service",
+										"default",
+										"group",
+										"testGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增角色",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/role/testrole",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"role",
+										"testrole"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除角色",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/role/testrole",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"role",
+										"testrole"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "绑定用户角色",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/role/ADMIN/user/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"role",
+										"ADMIN",
+										"user",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "解除用户角色绑定",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/role/ADMIN/user/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"role",
+										"ADMIN",
+										"user",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "绑定角色和组(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/role/ADMIN/group/testGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"role",
+										"ADMIN",
+										"group",
+										"testGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "解除角色和组绑定(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/roles/role/ADMIN/group/testGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"roles",
+										"role",
+										"ADMIN",
+										"group",
+										"testGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "绑定服务和角色(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/service/aaaa/role/ADMIN",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"service",
+										"aaaa",
+										"role",
+										"ADMIN"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "解除服务和角色绑定(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/service/aaaa/role/ADMIN",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"service",
+										"aaaa",
+										"role",
+										"ADMIN"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "绑定角色服务用户三者相关联(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/service/aaaa/roles/role/ADMIN/user/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"service",
+										"aaaa",
+										"roles",
+										"role",
+										"ADMIN",
+										"user",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "解除角色服务用户三者绑定(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/service/aaaa/roles/role/ADMIN/user/aaa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"service",
+										"aaaa",
+										"roles",
+										"role",
+										"ADMIN",
+										"user",
+										"aaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "绑定角色服务组三者相关联(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/service/aaaa/roles/role/ADMIN/group/testGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"service",
+										"aaaa",
+										"roles",
+										"role",
+										"ADMIN",
+										"group",
+										"testGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "解除服务角色组三者绑定(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/service/aaaa/roles/role/ADMIN/group/testGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"service",
+										"aaaa",
+										"roles",
+										"role",
+										"ADMIN",
+										"group",
+										"testGroup"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "分组",
+					"item": [
+						{
+							"name": "查询默认分组下用户(404)",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/rest/security/usergroup/users/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"rest",
+										"security",
+										"usergroup",
+										"users",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "获取管理员账号密码 404",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/rest/security/masterpw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"rest",
+								"security",
+								"masterpw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改管理员账号密码 404",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "geoserver",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/geoserver/rest/rest/security/masterpw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"geoserver",
+								"rest",
+								"rest",
+								"security",
+								"masterpw"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "服务",
+			"item": []
+		},
+		{
+			"name": "缓存",
+			"item": []
+		},
+		{
+			"name": "GWC",
+			"item": [
+				{
+					"name": "WMTS Layer",
+					"item": [
+						{
+							"name": "获取所有的工作空间",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/gwc/rest/layers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"layers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取一个工作空间详细信息",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/geoserver/gwc/rest/layers/ne:jinning",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"layers",
+										"ne:jinning"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "创建或者修改图层",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"GeoServerLayer\": {\r\n      \"id\": \"LayerInfoImpl-5b21e4b3:18a1b1f767f:-7ff6\",\r\n      \"enabled\": \"true\",\r\n      \"inMemoryCached\": \"true\",\r\n      \"name\": \"ne:jinning\",\r\n      \"mimeFormats\": {\r\n         \"string\": [\r\n            \"image/png\",\r\n            \"image/jpeg\"\r\n         ]\r\n      },\r\n      \"gridSubsets\": {\r\n         \"gridSubset\": [\r\n            {\r\n               \"gridSetName\": \"UTM38WGS84Quad\"\r\n            },\r\n            {\r\n               \"gridSetName\": \"EPSG:4326\"\r\n            },\r\n            {\r\n               \"gridSetName\": \"EPSG:4326x2\"\r\n            }\r\n         ]\r\n      },\r\n      \"metaWidthHeight\": {\r\n         \"int\": [\r\n            \"4\",\r\n            \"4\"\r\n         ]\r\n      },\r\n      \"expireCache\": \"0\",\r\n      \"expireClients\": \"0\",\r\n      \"parameterFilters\": {\r\n         \"styleParameterFilter\": {\r\n            \"key\": \"STYLES\",\r\n            \"defaultValue\": \"\",\r\n            \"availableStyles\": {\r\n               \"_class\": \"sorted-set\"\r\n            },\r\n            \"defaultStyle\": \"raster\"\r\n         }\r\n      },\r\n      \"gutter\": \"0\",\r\n      \"cacheWarningSkips\": \"\"\r\n   }\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/geoserver/gwc/rest/layers/ne:jinning",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"layers",
+										"ne:jinning"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除图层",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "igis123@geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"string\",\r\n  \"enabled\": true,\r\n  \"inMemoryCached\": true,\r\n  \"name\": \"string\",\r\n  \"mimeFormats\": [\r\n    \"string\"\r\n  ],\r\n  \"gridSubsets\": {\r\n    \"gridSubset\": {\r\n      \"gridSetName\": \"string\",\r\n      \"extent\": {\r\n        \"bounds\": 0\r\n      },\r\n      \"zoomStart\": 0,\r\n      \"zoomStop\": 0\r\n    }\r\n  },\r\n  \"metaWidthHeight\": 0,\r\n  \"expireCache\": 0,\r\n  \"expireClients\": 0,\r\n  \"parameterFilters\": {},\r\n  \"gutter\": 0\r\n}"
+								},
+								"url": {
+									"raw": "http://172.20.20.1:8600/geoserver/gwc/rest/layers/{layerName}",
+									"protocol": "http",
+									"host": [
+										"172",
+										"20",
+										"20",
+										"1"
+									],
+									"port": "8600",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"layers",
+										"{layerName}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Reloading",
+					"item": [
+						{
+							"name": "更新后刷新配置",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "igis123@geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "reload_configuration",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://172.20.20.1:8600/geoserver/gwc/rest/reload",
+									"protocol": "http",
+									"host": [
+										"172",
+										"20",
+										"20",
+										"1"
+									],
+									"port": "8600",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"reload"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "seeds",
+					"item": [
+						{
+							"name": "查询正在运行的任务",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "reload_configuration",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8080/geoserver/gwc/rest/seed.json",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"seed.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取某个图层任务进展",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/geoserver/gwc/rest/seed/ne:jinning",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"seed",
+										"ne:jinning"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "进行seed工作",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "threadCount",
+											"value": "01",
+											"type": "default"
+										},
+										{
+											"key": "type",
+											"value": "seed",
+											"type": "default"
+										},
+										{
+											"key": "gridSetId",
+											"value": "UTM38WGS84Quad",
+											"type": "default"
+										},
+										{
+											"key": "tileFormat",
+											"value": "image/png",
+											"type": "default"
+										},
+										{
+											"key": "zoomStart",
+											"value": "00",
+											"type": "default"
+										},
+										{
+											"key": "zoomStop",
+											"value": "15",
+											"type": "default"
+										},
+										{
+											"key": "parameter_STYLES",
+											"value": "raster",
+											"type": "default"
+										},
+										{
+											"key": "minX",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "minY",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "maxX",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "maxY",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "tileFailureRetryCount",
+											"value": "-1",
+											"type": "default"
+										},
+										{
+											"key": "tileFailureRetryWaitTime",
+											"value": "100",
+											"type": "default"
+										},
+										{
+											"key": "totalFailuresBeforeAborting",
+											"value": "1000",
+											"type": "default"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/geoserver/gwc/rest/seed/ne:泸西县双线性",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"seed",
+										"ne:泸西县双线性"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Gridsets",
+					"item": [
+						{
+							"name": "查询gridsets",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "reload_configuration",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8080/geoserver/gwc/rest/gridsets.json",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"gridsets.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询具体的gridsets",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "reload_configuration",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8080/geoserver/gwc/rest/gridsets/EPSG:4326.json",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"gridsets",
+										"EPSG:4326.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑gridsets",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "geoserver",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"gridSet\": {\r\n    \"name\": \"EPSG:zidingyi\",\r\n    \"srs\": { \"number\": \"4326\" },\r\n    \"extent\": {\r\n      \"coords\": {\r\n        \"double\": [\r\n          \"-180.0\",\r\n          \"-90.0\",\r\n          \"180.0\",\r\n          \"90.0\"\r\n        ]\r\n      }\r\n    },\r\n    \"alignTopLeft\": \"false\",\r\n    \"resolutions\": {\r\n      \"double\": [\r\n        \"0.703125\",\r\n        \"0.3515625\",\r\n        \"0.17578125\",\r\n        \"0.087890625\",\r\n        \"0.0439453125\"\r\n      ]\r\n    },\r\n    \"metersPerUnit\": \"111319.49079327358\",\r\n    \"pixelSize\": \"2.8E-4\",\r\n    \"scaleNames\": {\r\n      \"string\": [\r\n        \"EPSG:zidingyi:0\",\r\n        \"EPSG:zidingyi:1\",\r\n        \"EPSG:zidingyi:2\",\r\n        \"EPSG:zidingyi:3\",\r\n        \"EPSG:zidingyi:4\"\r\n      ]\r\n    },\r\n    \"tileHeight\": \"256\",\r\n    \"tileWidth\": \"256\",\r\n    \"yCoordinateFirst\": \"true\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/geoserver/gwc/rest/gridsets/EPSG:zidingyi",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"geoserver",
+										"gwc",
+										"rest",
+										"gridsets",
+										"EPSG:zidingyi"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
