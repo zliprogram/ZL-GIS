@@ -35,6 +35,48 @@
             <systemPath>${project.basedir}/lib/gdal.jar</systemPath>
         </dependency>
 
+        <!-- 加载lib目录下的opencv包 -->
+        <dependency>
+            <groupId>org.opencv</groupId>
+            <artifactId>opencv</artifactId>
+            <version>4.6.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/opencv-460.jar</systemPath>
+        </dependency>
+
+        <!-- 如果需要 JAI ImageIO -->
+        <dependency>
+            <groupId>javax.media</groupId>
+            <artifactId>jai_core</artifactId>
+            <version>1.1.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.jai-imageio</groupId>
+            <artifactId>jai-imageio-core</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <!-- openimaj -->
+        <dependency>
+            <groupId>org.openimaj</groupId>
+            <artifactId>core-image</artifactId>
+            <version>1.3.10</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- 日志依赖 -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
         <!--geotools工具-->
         <dependency>
             <groupId>org.geotools</groupId>
